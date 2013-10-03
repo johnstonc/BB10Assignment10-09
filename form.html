@@ -1,0 +1,52 @@
+<div data-bb-type="screen" data-bb-effect="fade">
+    <div data-bb-type="title" data-bb-caption="Enter to Win"></div>
+    <div data-bb-type="round-panel"> 
+        <div data-bb-type="label-control-container">
+            <div>First Name<input id="firstName" type="text" name="first" autofocus required/></div>
+            <div>Last Name<input id="lastName" type="text" name="last" required/></div>
+            <div>Email Address<input id="email" type="email" name="email" required/></div>
+            <div>How many pets in your household<input id="numberPets" type="number" name="numberPets" required /></div>
+        </div>
+        <div data-bb-type="label">Choose which draw to enter:</div>
+        <select id="petType" name="petType"  data-bb-style="stretch" data-bb-label="Pet Type"  onchange=toggle(this.value)>
+            <option value="1" data-bb-accent-text="Woof">Dog</option>
+            <option value="2" data-bb-accent-text="Meow">Cat</option>
+            <option value="3" data-bb-accent-text="Slither">Reptile</option>
+            <option value="4" data-bb-accent-text="">Other</option>
+        </select>
+        <div class="subType" id="subType1">
+        <div  data-bb-type="label">Choose Dog Age:</div>
+            <select id="dogSubType" name="dogSubType"  data-bb-style="stretch" data-bb-label="Dog Sub Type"  onchange=addBtn(this.value)>
+                <option value="1" data-bb-accent-text="Puppy">( under 1 year)</option>
+                <option value="2" data-bb-accent-text="Young Adult">(1-7 years)</option>
+                <option value="3" data-bb-accent-text="Mature">(over 7 years)</option>
+            </select>
+        </div>
+        <div class="subType" id="subType2">
+            <div data-bb-type="label">Choose Cat Age:</div>
+            <select id="catSubType" name="catSubType"  data-bb-style="stretch" data-bb-label="Cat Sub Type"  onchange=addBtn(this.value)>
+                <option value="1" data-bb-accent-text="Kitten">( under 1 year)</option>
+                <option value="2" data-bb-accent-text="Young Adult">(1-7 years)</option>
+                <option value="3" data-bb-accent-text="Mature">(over 7 years)</option>
+            </select>
+        </div>
+        <div class="subType" id="subType3">
+            <div data-bb-type="label">Choose Repitle Age:</div>
+            <select id="reptileSubType" name="reptileSubType"  data-bb-style="stretch" data-bb-label="Reptile Sub Type"  onchange=addBtn(this.value)>
+                <option value="1" data-bb-accent-text="">Snake</option>
+                <option value="2" data-bb-accent-text="">Lizard</option>
+                <option value="3" data-bb-accent-text="">Turtle</option>
+            </select>
+        </div>
+        <div class="subType" id="subType4">
+            <div data-bb-type="label">Enter Other Type:</div>
+            <input id="otherSubType" type="text" name="otherSubType"  data-bb-style="stretch" data-bb-label="Other Sub Type" oninput=addBtn(this.value)>
+        </div>
+    </div>
+    <div class="subType" data-bb-type="button" id="save" class="subType" data-bb-style="stretch" onclick="doSave()">Save!</div>
+    <div data-bb-type="action-bar">
+         <div data-bb-type="action" id="enterDraw" data-bb-style="tab" data-bb-accent-text="Enter Draw" data-bb-img="images/newtab.png" onclick="addCat()">Enter Draw</div>
+        <div data-bb-type="action" id="viewEntries" data-bb-style="tab" data-bb-accent-text="View Entries" data-bb-img="images/Share.png" onclick="doShare()">View Entries</div>
+    </div>
+</div>
+
